@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_on/features.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/app_images.dart';
 import '../../../core/app_routes.dart';
 import '../../../shared/button.dart';
 import '../../../shared/state_enum.dart';
@@ -27,10 +27,12 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.watch<AppTheme>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login Page'),
       ),
+      backgroundColor: theme.colors.backgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -38,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const SizedBox(height: 48),
               Image.asset(
-                AppImages.logo,
+                theme.images.logo,
                 width: 200,
                 height: 200,
               ),

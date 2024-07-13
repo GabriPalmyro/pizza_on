@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_on/app/core/app_theme.dart';
 import 'package:provider/src/provider.dart';
-
-import '../core/app_colors.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({required this.onPressed, required this.label, this.loading = false, super.key});
@@ -12,7 +11,7 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = context.read<AppColors>();
+    final theme = context.read<AppTheme>();
     return InkWell(
       onTap: onPressed,
       child: Container(
@@ -20,7 +19,7 @@ class ButtonWidget extends StatelessWidget {
         height: 40,
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: colors.buttonColor,
+          color: theme.colors.buttonColor,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
@@ -29,7 +28,7 @@ class ButtonWidget extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                color: colors.white,
+                color: theme.colors.white,
               ),
             ),
             if (loading)
@@ -39,7 +38,7 @@ class ButtonWidget extends StatelessWidget {
                   width: 16,
                   height: 16,
                   child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(colors.white),
+                    valueColor: AlwaysStoppedAnimation<Color>(theme.colors.white),
                     strokeWidth: 1.5,
                   ),
                 ),

@@ -1,8 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:pizza_on/app/core/app_colors.dart';
 
-
-class AppColorBrazolio implements AppColors {
+class AppBrazolioColors implements AppColors {
   @override
   Color get backgroundColor => const  Color.fromARGB(255, 125, 194, 240);
 

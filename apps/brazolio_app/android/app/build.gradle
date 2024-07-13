@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.pizza_on"
+    namespace "com.pizza_on.brazolio_app"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

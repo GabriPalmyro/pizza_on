@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_on/app/core/app_theme.dart';
 import 'package:provider/provider.dart';
 
-import '../../../core/app_images.dart';
 import '../../../core/app_routes.dart';
 import '../../../shared/button.dart';
 import '../../controllers/user/user_manager.dart';
@@ -11,10 +11,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.watch<AppTheme>();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
+      backgroundColor: theme.colors.backgroundColor,
       body: Consumer<UserManager>(
         builder: (_, value, __) {
           return Center(
@@ -22,7 +24,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  AppImages.logo,
+                  theme.images.logo,
                   width: 200,
                   height: 200,
                 ),

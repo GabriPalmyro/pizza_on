@@ -5,10 +5,13 @@ import '../../../shared/state_enum.dart';
 import '../../models/user/user_model.dart';
 
 class UserManager extends ChangeNotifier {
+
+  UserManager({required this.api});
+
   User? user;
   StateEnum state = StateEnum.idle;
 
-  final api = Api.instance;
+  final Api api;
 
   void setUser(User user) {
     this.user = user;

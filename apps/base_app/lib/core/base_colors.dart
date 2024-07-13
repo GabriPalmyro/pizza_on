@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 import 'package:pizza_on/app/core/app_colors.dart';
 
-class AppColorBraciera implements AppColors {
+class AppBaseColors implements AppColors {
   @override
-  Color get backgroundColor => const Color(0xFFE5E5E5);
+  Color get backgroundColor => Color.fromARGB(255, 206, 206, 206);
 
   @override
   Color get black => const Color(0xFF000000);
 
   @override
-  Color get buttonColor => const Color.fromARGB(255, 22, 82, 151);
+  Color get buttonColor => Color.fromARGB(255, 22, 151, 28);
 
   @override
   Color get grey => const Color(0xFF313131);
@@ -31,7 +31,7 @@ class AppColorBraciera implements AppColors {
   Color get red => const Color(0xFFFF2000);
 
   @override
-  Color get textColor => const Color(0xFFFFFFFF);
+  Color get textColor => Color.fromARGB(255, 224, 224, 224);
 
   @override
   Color get white => const Color(0xFFFFFFFF);

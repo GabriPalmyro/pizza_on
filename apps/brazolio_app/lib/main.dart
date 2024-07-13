@@ -1,12 +1,10 @@
+import 'package:brazolio_app/core/brazolio_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pizza_on/app/core/app_colors.dart';
 import 'package:pizza_on/app/core/app_routes.dart';
-import 'package:pizza_on/app/providers.dart';
-import 'package:pizza_on/app/routes/routes.dart';
+import 'package:pizza_on/features.dart';
 import 'package:provider/src/provider.dart';
 
-import 'brazolio_colors.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,17 +20,17 @@ void main() {
     ),
   );
 
-  final colors = AppColorBrazolio();
+  final theme = AppBrazolioTheme();
 
   runApp(
-    AppWidget(colors: colors),
+    AppWidget(theme: theme),
   );
 }
 
 class AppWidget extends StatefulWidget {
-  const AppWidget({required this.colors, super.key});
+  const AppWidget({required this.theme, super.key});
 
-  final AppColors colors;
+  final AppTheme theme;
 
   @override
   State<AppWidget> createState() => _AppWidgetState();
@@ -43,11 +41,11 @@ class _AppWidgetState extends State<AppWidget> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        Provider<AppTheme>.value(value: widget.theme),
         ...providers,
-        Provider<AppColors>.value(value: widget.colors),
       ],
       child: MaterialApp(
-        title: 'Pizza On',
+        title: widget.theme.texts.appTitle,
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutes.login,
         onGenerateRoute: AppRouter().generateRoute,

@@ -1,3 +1,3 @@
-class AppTexts {
-  
+abstract class AppTexts {
+  String get appTitle;
 }

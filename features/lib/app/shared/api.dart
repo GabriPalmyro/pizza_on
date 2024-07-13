@@ -7,16 +7,16 @@ import '../core/app_services.dart';
 import '../features/models/user/user_model.dart';
 
 class Api {
-  Api._();
+  Api({required this.appServices});
+
+  final AppServices appServices;
 
   final client = http.Client();
 
-  static final Api instance = Api._();
-
   Future<User> login(String account, String password) async {
-    log('LOGIN GET ${AppServices.baseUrl}/login - $account $password', name: 'API');
+    log('LOGIN GET ${appServices.endpoint}/login - $account $password', name: 'API');
     try {
-      final Uri url = Uri.parse('${AppServices.baseUrl}/login');
+      final Uri url = Uri.parse('${appServices.endpoint}/login');
       final request = await client.post(
         url,
         body: {
@@ -24,7 +24,7 @@ class Api {
           'password': password,
         },
       );
-      
+
       if (request.statusCode == HttpStatus.ok) {
         return User.fromJson(request.body);
       } else {

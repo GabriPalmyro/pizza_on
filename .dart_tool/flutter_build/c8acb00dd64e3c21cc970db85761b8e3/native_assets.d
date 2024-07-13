@@ -1,1 +1,0 @@
- D:\\Estudos\\Programacao\\pizza_on\\.dart_tool\\flutter_build\\c8acb00dd64e3c21cc970db85761b8e3\\native_assets.yaml: 

@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "base_app",
+            "program": "apps/base_app/lib/main",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--no-sound-null-safety",
+                "--debug"
+            ]
+        },
+        {
+            "name": "braciera_app",
+            "program": "apps/braciera_app/lib/main",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--debug"
+            ]
+        },
+        {
+            "name": "brazolio_app",
+            "program": "apps/brazolio_app/lib/main",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--debug"
+            ]
+        },
+    ]
+}

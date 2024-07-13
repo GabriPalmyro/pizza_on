@@ -1,0 +1,92 @@
+{
+  "uuid": "634842b8-7d3a-43e4-9ecc-004dd99f6cba",
+  "lastMigration": 32,
+  "name": "Braciera On Mock",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3002,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "2cea2ef2-0abd-4def-a9ef-bce4d0b43edf",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "1df0c60f-c0ed-42b1-b4e4-ae951cbafbc5",
+          "body": "{\n  \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Login",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "2cea2ef2-0abd-4def-a9ef-bce4d0b43edf"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

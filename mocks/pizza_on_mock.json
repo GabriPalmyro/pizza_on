@@ -1,0 +1,92 @@
+{
+  "uuid": "afae8388-e084-4cae-b0ba-175b24cd6aa7",
+  "lastMigration": 32,
+  "name": "Pizza On Mock",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "b380903a-3de6-4c79-acb1-10250e75fd10",
+      "type": "http",
+      "documentation": "Login",
+      "method": "post",
+      "endpoint": "login",
+      "responses": [
+        {
+          "uuid": "2465a7ed-8acb-4376-ab8d-d15f90fdc945",
+          "body": "{\n  \"id\": \"117502\",\n  \"name\": \"Gabriel Palmyro\",\n  \"email\": \"gabripalmyro13579@gmail.com\"\n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "Common Login",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "b380903a-3de6-4c79-acb1-10250e75fd10"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

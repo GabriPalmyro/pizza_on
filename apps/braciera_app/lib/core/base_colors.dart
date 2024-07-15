@@ -4,7 +4,7 @@ import 'package:pizza_on/app/core/app_colors.dart';
 
 class AppBracieraColors implements AppColors {
   @override
-  Color get backgroundColor => Color.fromARGB(255, 51, 51, 51);
+  Color get backgroundColor => Color.fromARGB(255, 130, 213, 247);
 
   @override
   Color get black => const Color(0xFF000000);

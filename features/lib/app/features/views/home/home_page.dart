@@ -35,6 +35,15 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: ButtonWidget(
                     onPressed: () {
+                      Navigator.pushNamed(context, AppRoutes.menu);
+                    },
+                    label: 'Abrir Menu',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: ButtonWidget(
+                    onPressed: () {
                       context.read<UserManager>().logout(() {
                         Navigator.pushReplacementNamed(context, AppRoutes.login);
                       });

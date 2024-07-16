@@ -12,6 +12,10 @@ dependencies:
 
   pizza_on:
     path: ../../features
+  network_provider:
+    path: ../../common/network
+  xdebugging:
+    path: ../../common/xdebugging
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,7 @@
 import 'package:base_app/core/base_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:network_provider/network.dart';
 import 'package:pizza_on/app/core/app_routes.dart';
 import 'package:pizza_on/app/core/app_theme.dart';
 import 'package:pizza_on/app/providers.dart';
@@ -43,6 +44,7 @@ class _AppWidgetState extends State<AppWidget> {
     return MultiProvider(
       providers: [
         Provider<AppTheme>.value(value: widget.theme),
+        ...networkProviders,
         ...providers,
       ],
       child: MaterialApp(

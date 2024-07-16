@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xdebugging/presentation/pages/xdebugging_page.dart';
 
 import '../core/app_routes.dart';
 import '../features/views/home/home_page.dart';
@@ -11,6 +12,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginPage());
       case AppRoutes.home:
         return MaterialPageRoute(builder: (_) => const HomePage());
+      case AppRoutes.debugging:
+        return MaterialPageRoute(builder: (_) => const DebuggingPage());
       default:
         return null;
     }

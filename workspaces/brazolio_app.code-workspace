@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../apps/base_app"
+		},
+		{
+			"path": "../features"
+		}
+	],
+	"settings": {}
+}
